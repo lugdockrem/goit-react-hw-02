@@ -1,0 +1,13 @@
+.feedback {
+    margin-top: 30px;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .list li {
+    margin: 10px 0;
+    color: #333;
+  }
