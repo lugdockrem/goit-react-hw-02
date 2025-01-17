@@ -1,0 +1,28 @@
+.options {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .reset {
+    background-color: #ff6b6b;
+    color: white;
+    border-color: #ff5252;
+  }
+  
+  .reset:hover {
+    background-color: #ff5252;
+  }
