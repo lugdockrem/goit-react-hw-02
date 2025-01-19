@@ -1,10 +1,7 @@
-import React from 'react';
-import styles from './Notification.module.css';
-
-export const Notification = ({ message }) => {
+export default function Notification({text}) {
   return (
-    <div className={styles.notification}>
-      {message}
-    </div>
-  );
-};
+      <div>
+          <p>{text}</p>
+      </div>
+  )
+}

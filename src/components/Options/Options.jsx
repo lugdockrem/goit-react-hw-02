@@ -1,37 +1,14 @@
-import React from 'react';
-import styles from './Options.module.css';
+import css from "./Options.module.css";
 
-export const Options = ({ onLeaveFeedback, onReset }) => {
-  return (
-    <div className={styles.options}>
-      <button
-        type="button"
-        onClick={() => onLeaveFeedback('good')}
-        className={styles.button}
-      >
-        Good
-      </button>
-      <button
-        type="button"
-        onClick={() => onLeaveFeedback('neutral')}
-        className={styles.button}
-      >
-        Neutral
-      </button>
-      <button
-        type="button"
-        onClick={() => onLeaveFeedback('bad')}
-        className={styles.button}
-      >
-        Bad
-      </button>
-      <button
-        type="button"
-        onClick={onReset}
-        className={`${styles.button} ${styles.reset}`}
-      >
-        Reset
-      </button>
-    </div>
-  );
-};
+export default function Options({ updateFeedback, totalFeedback, resetFeedback }) {
+    return (
+      <div className={css.buttonDiv}>
+        <button onClick={() => updateFeedback('good')} className={css.button}>Good</button>
+        <button onClick={() => updateFeedback('neutral')} className={css.button}>Neutral</button>
+        <button onClick={() => updateFeedback('bad')} className={css.button}>Bad</button>
+        {totalFeedback > 0 && (
+          <button onClick={resetFeedback} className={css.button}>Reset</button>
+        )}
+      </div>
+    );
+  }
